@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css">
+    <title>Road Signs</title>
+</head>
+
+<body>
+
+    <!-- Your Code Here -->
+
+    <div class="container">
+        <div class="box text-center">
+            <h1 class="visually-hidden">Road signs</h1>
+
+            <button class="start-btn btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">START</button>
+        </div>
+
+        <form class="js-form d-none text-center" method="POST">
+            <select class="form-select js-question-select text-bg-secondary" name="questions_select">
+        <option value="easy">EASY</option>
+        <option value="medium">MEDIUM</option>
+        <option value="hard">HARD</option>
+      </select>
+            <select class="form-select js-time-select  text-bg-secondary mb-5">
+        <option value="3">3 min</option>
+        <option value="5">5 min</option>
+        <option value="8">8 min</option>
+      </select>
+            <button type="submit" class="btn btn-primary go-btn">
+        Go
+      </button>
+        </form>
+    </div>
+
+
+
+    <div class="modal ">
+        <div class="modal-box mt-5 mx-auto mb-3 p-4 text-bg-dark rounded-3">
+            <div class="d-flex flex-column flex-sm-row align-items-center mb-3 text-bg-secondary bg-opacity-75 rounded-2 p-2 justify-content-between">
+                <p class="point">Score: <span class="point-count"></span></p>
+                <p class="attempt">Attempt: <span class="attempt-count"></span></p>
+                <p class="time">Time: <span class="time-count"></span></p>
+            </div>
+            <div class="text-bg-secondary bg-opacity-75 rounded-2 p-3 text-center mb-4">
+                <h3 class="fs-4 mb-0 js-title"></h3>
+            </div>
+            <ul class="list-unstyled js-img-list text-bg-secondary bg-opacity-75 rounded-2 mb-0 px-2 py-4 row"></ul>
+        </div>
+    </div>
+
+    <div class="end-game bg-dark d-none">
+        <audio class="end-game-sound" src="./sounds/failure-drum-sound-effect-2-7184.mp3"></audio>
+        <div class="w-50 mx-auto text-center h-50">
+            <img class="game-total d-block mx-auto mb-3" src="./images/Game-Over-Transparent-PNG.png" alt="">
+            <p class="point text-white mb-5">Score: <span class="end-game-point">0</span></p>
+            <button class=" d-block button-reset mx-auto" type="button"></button>
+        </div>
+    </div>
+
+    <div class="win-game d-none">
+        <audio class="win-sound" src="./sounds/short-crowd-cheer-6713.mp3"></audio>
+        <div class="w-50 mx-auto text-center winner-wrapper">
+            <img class="game-total-win d-block mx-auto mb-3" src="./images/winner.png" alt="">
+            <p class="point text-white mb-5">Score: <span class="point-count-win">0</span></p>
+            <button class="btn-reset d-block mx-auto" type="button"></button>
+        </div>
+    </div>
+
+    <template class="temp">
+    <li class="col-12 col-sm-6 col-md-4 col-lg-3 col-xxl-2 list-item  mb-4">
+      <div class="bg-secondary rounded-2 p-2 sign-item text-center">
+        <img class="sign-img mx-auto" src="" alt="">
+      </div>
+    </li>
+  </template>
+    <!-- Kerakli Array shu fileda -->
+    <script src="./signs.js"></script>
+    <!-- Code yoziladigan js file shu -->
+    <script src="./main.js"></script>
+</body>
+
+</html>

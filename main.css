@@ -1,0 +1,141 @@
+body {
+    position: relative;
+    background-image: url("./images/road.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.box {
+    padding: 50px 0;
+    width: 100%;
+    max-width: 500px;
+    margin: 150px auto 0 auto;
+    transform: translateY(40%);
+}
+
+.road-title {
+    margin-bottom: 32px;
+    font-family: cursive;
+    font-size: 48px;
+    line-height: 56px;
+}
+
+.js-form {
+    padding: 50px 0;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    transform: translateY(40%);
+}
+
+.js-question-select {
+    margin-bottom: 80px;
+}
+
+.modal {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.modal-box {
+    width: 90%;
+}
+
+.list-unstyled {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list-item {
+    min-width: 160px;
+    height: 180px;
+}
+
+.sign-img {
+    width: 150px;
+    height: 150px;
+    pointer-events: none;
+}
+
+.win-game {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./images/game-over.png");
+}
+
+.winner-wrapper {
+    padding-top: 120px;
+}
+
+.game-total-win {
+    width: 100%;
+    max-width: 400px;
+}
+
+.checked-true {
+    pointer-events: none;
+    opacity: 0.1;
+}
+
+.bg-danger {
+    pointer-events: none;
+}
+
+.shake {
+    animation: shake-animation 4.72s ease 1;
+    transform-origin: 50% 50%;
+}
+
+.end-game {
+    width: 100%;
+    height: 100vh;
+    padding-top: 150px;
+    background-image: url("./images/game-over.png");
+    background-size: cover;
+}
+
+.game-total {
+    width: 100%;
+    max-width: 300px;
+}
+
+.button-reset,
+.btn-reset {
+    width: 100px;
+    height: 100px;
+    background-image: url("./images/replay.svg");
+    background-color: transparent;
+    background-size: contain;
+    border: none;
+}
+
+.animat {
+    animation: shake 150ms 2 linear;
+}
+
+
+/*
+@keyframes shake-animation {
+  0% { transform:translate(0,0) }
+ 1.78571% { transform:translate(5px,0) }
+ 3.57143% { transform:translate(0,0) }
+ 5.35714% { transform:translate(5px,0) }
+ 7.14286% { transform:translate(0,0) }
+ 8.92857% { transform:translate(5px,0) }
+ 10.71429% { transform:translate(0,0) }
+ 100% { transform:translate(0,0) }
+} */
